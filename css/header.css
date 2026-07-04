@@ -67,10 +67,8 @@
   color: #404bbf;
 }
 
-.header-cont {
+.header-container {
   border-bottom: 1px solid var(--cornflower);
-  width: 1440px;
-  height: 72px;
 }
 
 .header-link-group {
@@ -82,9 +80,7 @@
 .header-link {
   display: flex;
   gap: 40px;
-  justify-content: space-around;
   align-items: center;
-  padding-right: 340px;
   padding: 24px 0px;
 }
 

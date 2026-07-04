@@ -22,22 +22,22 @@
 
 <!--шапка хедера-->
 <body>
-    <header id="header">
-        <div class="header-cont">
-            <div class="container header-link-group">
+<header id="header">
+    <div class="container">
+        <div class="header-container header-link-group">
 
 
-                <a href="./index.html" class="logo"><span class="accent">Web</span>Studio</a>
+            <a href="./index.html" class="logo"><span class="accent">Web</span>Studio</a>
 
-                <nav>
-                    <ul class="header-link">
-                        <li><a class="features" href="#features">Features</a></li>
+            <nav>
+                <ul class="header-link">
+                    <li><a class="features" href="#features">Features</a></li>
 
-                        <li><a class="team" href="#team">Team</a></li>
+                    <li><a class="team" href="#team">Team</a></li>
 
-                        <li><a class="portfolio" href="#portfolio">Portfolio</a></li>
-            
-            </ul>
+                    <li><a class="portfolio" href="#portfolio">Portfolio</a></li>
+
+                </ul>
             </nav>
             <address>
                 <ul class="header-contact">
@@ -51,9 +51,11 @@
                 </ul>
 
             </address>
-            </div>
-            </div>
-    </header>
+        </div>
+    </div>
+</header>
+
+
 
     <main>
         <!--шапка сторінки-->
@@ -66,28 +68,28 @@
                     <button class="button" type="button">Order Service</button>
 
                 </div>
-
+                
                 </section>
 
 
-            <!--секці команди-->
+            <!--секці features-->
         
 
-                <section id="features">
+                <section class="features-box" id="features">
                 <div class="container hero-container">
                         
-                    <h2 class="features-comand">Our Features</h2>
+                    <h2 class="sr-only">Our Features</h2>
 
                     <ul class="features-description">
 
-                        <li class="list-description">
+                        <li>
                             <h3 class="description-features">Strategy</h3>
                             <p class="style">Our goal is to identify the business problem to walk away with the perfect
                                 and creative solution.
                             </p>
                         </li>
 
-                        <li class="list-description">
+                        <li>
                             <h3 class="description-features">Punctuality</h3>
                             <p class="style">Bring the key message to the brand's audience for the best price within the
                                 shortest possible
@@ -97,7 +99,7 @@
 
 
 
-                        <li class="list-description">
+                        <li>
                             <h3 class="description-features">Diligence</h3>
                             <p class="style">Research and confirm brands with the strongest digital growth opportunities
                                 and minimize risk.
@@ -107,7 +109,7 @@
 
 
 
-                        <li class="list-description">
+                        <li>
                             <h3 class="description-features">Technologies</h3>
                             <p class="style">Design practice focused on digital experiences. We bring forth a deep
                                 passion for
@@ -127,39 +129,47 @@
                 <section class="team-background-color" id="team">
                     <div class="container container-team">
 
-                    <div class="box-container">
+                    
                         <h2 class="team-description">Our Team</h2>
 
                         <ul class="list-none image-flex">
                             <li class="team-color">
                                 <img src="./images/team-1.jpg" alt="Mark Guerrero" height="260" width="264">
+                                <div class="box-container">
                                 <h3 class="name">Mark Guerrero</h3>
                                 <p class="profession-team">Product Designer</p>
+                                </div>
                             </li>
 
 
                             <li class="team-color">
                                 <img src="./images/team-2.jpg" alt="Tom Ford" height="260" width="264">
+                                 <div class="box-container">
                                 <h3 class="name">Tom Ford</h3>
                                 <p class="profession-team">Frontend Developer</p>
+                                </div>
                             </li>
 
 
                             <li class="team-color">
                                 <img src="./images/team-3.jpg" alt="Camila Garcia" height="260" width="264">
+                                <div class="box-container">
                                 <h3 class="name">Camila Garcia</h3>
                                 <p class="profession-team">Marketing</p>
+                                </div>
                             </li>
 
 
 
                             <li class="team-color">
                                 <img src="./images/team-4.jpg" alt="Daniel Wilson" height="260" width="264">
+                                 <div class="box-container">
                                 <h3 class="name">Daniel Wilson</h3>
                                 <p class="profession-team">UI Designer</p>
+                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    
                     </div>
                 </section>
 
@@ -170,7 +180,7 @@
 
             
 
-                <section id="portfolio">
+                <section class="portfolio" id="portfolio">
                 <div class="container container-portfolio">
 
                     <div class="list-portfolio">
@@ -179,42 +189,54 @@
 
                     
 
-                <ul class="portfolio flex-portfolio-description">
+                <ul class="portfolio-image flex-portfolio-description">
 
-                            <li class="item project-list">
+                            <li class="item">
                                 <img src="./images/portfolio-1.jpg" alt="Banking App" height="300" width="360">
+                                <div class="project-list">
                                 <h3 class="profession">Banking App</h3>
                                 <p class="profession-description">App</p>
+                                </div>
                             </li>
 
-                            <li class="item project-list">
+                            <li class="item">
                                 <img src="./images/portfolio-2.jpg" alt="Cashless Payment" height="300" width="360">
+                                <div class="project-list">
                                 <h3 class="profession">Cashless Payment</h3>
                                 <p class="profession-description">Marketing</p>
+                                </div>
                             </li>
 
-                            <li class="item project-list">
+                            <li class="item">
                                 <img src="./images/portfolio-3.jpg" alt="Meditation App" height="300" width="360">
+                                <div class="project-list">
                                 <h3 class="profession">Meditation App</h3>
                                 <p class="profession-description">App</p>
+                                </div>
                             </li>
 
-                            <li class="item project-list">
+                            <li class="item">
                                 <img src="./images/portfolio-4.jpg" alt="Taxi Service" height="300" width="360">
+                                <div class="project-list">
                                 <h3 class="profession">Taxi Service</h3>
                                 <p class="profession-description">Marketing</p>
+                                </div>
                             </li>
 
-                            <li class="item project-list">
+                            <li class="item">
                                 <img src="./images/portfolio-5.jpg" alt="Screen Illustrations" height="300" width="360">
+                                <div class="project-list">
                                 <h3 class="profession">Screen Illustrations</h3>
                                 <p class="profession-description">Design</p>
+                                </div>
                             </li>
 
-                            <li class="item project-list">
+                            <li class="item">
                                 <img src="./images/portfolio-6.jpg" alt="Online Courses" height="300" width="360">
+                                <div class="project-list">
                                 <h3 class="profession">Online Courses</h3>
                                 <p class="profession-description">Marketing</p>
+                                </div>
                             </li>
 
                         </ul>

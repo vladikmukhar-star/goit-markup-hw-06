@@ -23,7 +23,7 @@
 .page-footer {
   background-color: #2e2f42;
   color: #f4f4fd;
-  min-width: 1440px;
+  width: 1440px;
   padding: 100px;
 }
 
@@ -43,13 +43,10 @@
   display: block;
   text-align: left;
   padding: 0px 15px;
-  width: 1158px;
-  height: 112px;
   max-width: 1158px;
 }
 
 .footer-left {
   width: 264px;
-  height: 112px;
   max-width: 264px;
 }

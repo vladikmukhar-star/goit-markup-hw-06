@@ -1,7 +1,14 @@
 .portfolio {
+  padding: 120px 0px;
+}
+
+.portfolio-image img {
   color: #2e2f42;
   text-decoration: none;
   font-weight: 500;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 ul {
@@ -15,7 +22,7 @@ ul {
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .profession {
@@ -25,7 +32,7 @@ ul {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  padding: 32px 16px;
+  margin: 0;
 }
 
 .profession-description {
@@ -35,40 +42,32 @@ ul {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding: 32px 16px;
 }
 
 .container-portfolio {
-  padding: 120px 121px;
-  width: 1440px;
-
-  display: flex;
-  justify-content: center;
-  margin: auto;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .list-portfolio {
-  padding: 0px 156px 120px;
-  width: 1158px;
-  max-width: 1158px;
+  display: block;
 }
 
 .flex-portfolio-description {
   display: flex;
   flex-wrap: wrap;
-  justify-self: center;
-  align-items: center;
-  padding: 0px 15px;
-  width: 1128px;
-  height: 888px;
   gap: 48px 24px;
+  padding: 0;
+  margin: 0;
 }
 
 .item {
   width: calc((100% - 48px) / 3);
-  justify-self: center;
-  align-items: center;
 }
 
 .project-list {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
