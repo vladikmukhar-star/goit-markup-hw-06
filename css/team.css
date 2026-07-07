@@ -46,6 +46,7 @@
 .team-color {
   background-color: #fff;
   border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .box-container {
@@ -76,12 +77,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: #f4f4fd;
 
   color: #fff;
   background-color: #4d5ae5;
   border-radius: 40px;
   width: 40px;
   height: 40px;
+
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms ease-in-out;
 }
 
 .image-flex {

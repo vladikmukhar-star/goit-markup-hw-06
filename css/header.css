@@ -1,33 +1,29 @@
-/* --- СКИДАННЯ СТИЛІВ ДЛЯ СПИСКІВ --- */
 .header-link,
 .header-contact {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Рятує елементи li від переносу */
+  display: flex;
   align-items: center;
 }
 
 .header-link {
-  gap: 40px; /* Відступ між Features, Team, Portfolio */
+  gap: 40px;
 }
 
 .header-contact {
-  gap: 40px; /* Відступ між поштою та телефоном */
+  gap: 40px;
 }
 
-/* --- ХЕДЕР --- */
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
 
-/* Головний флекс-контейнер шапки */
 .container-links {
   display: flex;
-  align-items: center; /* Вирівнює лого, нав і контакти строго по вертикальному центру */
+  align-items: center;
 }
 
-/* --- ЛОГОТИП --- */
 .logo {
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
@@ -38,7 +34,6 @@
   letter-spacing: 0.03em;
   color: #2e2f42;
 
-  /* Чіткий фіксований відступ від логотипу до навігації за макетом */
   margin-right: 76px;
 }
 
@@ -46,36 +41,47 @@
   color: #4d5ae5;
 }
 
-/* Навігація */
 .header-nav {
   display: flex;
   align-items: center;
-  /* Штовхає контакти в самий правий край екрана, заповнюючи простір */
   margin-right: auto;
 }
 
-/* --- ПОСИЛАННЯ (КЛІКАБЕЛЬНА ЗОНА 24px) --- */
 .nav-link,
 .contact-link {
-  display: block; /* Робить падінги активними */
-  padding: 24px 0; /* Вимога ментора: по 24px зверху і знизу */
+  display: block;
+  padding: 24px 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Для красивого ховеру */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Колір для навігації */
 .nav-link {
   font-weight: 500;
   color: #2e2f42;
+  position: relative;
 }
 
-/* Стилі для контактів */
+.nav-link.current {
+  color: #404bbf;
+}
+
+.nav-link.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
+
 .contacts-address {
-  font-style: normal; /* Прибирає дефолтний курсив */
+  font-style: normal;
 }
 
 .contact-link {
@@ -83,7 +89,6 @@
   color: #434455;
 }
 
-/* ХОВЕРИ ТА ФОКУСИ */
 .nav-link:hover,
 .nav-link:focus,
 .contact-link:hover,
