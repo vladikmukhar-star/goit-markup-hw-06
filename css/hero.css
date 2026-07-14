@@ -36,6 +36,11 @@
   margin: 0 auto;
 }
 
+.but {
+  display: flex;
+  justify-content: center;
+}
+
 .button {
   background-color: #4d5ae5;
   color: #ffffff;

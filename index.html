@@ -53,9 +53,9 @@
             <div class="container hero-container">
 
                 <h1 class="page-title">Effective Solutions<br> for Your Business</h1>
-
+                 <div class="but">
                 <button class="button" type="button">Order Service</button>
-
+                </div>
             </div>
         </section>
 
@@ -498,8 +498,88 @@
             </ul>
         </div>
 
+        <div class="footer-subscribe-container">
+            <p class="subscribe-description">Subscribe</p>
+
+            <form class="subscribe-form">
+                <label class="subscribe-label">
+                    <input type="email" name="email" class="subscribe-input" placeholder="E-mail" required />
+                </label>
+
+                <button type="submit" class="subscribe-btn">
+                    Subscribe
+                    <svg width="24" height="20" class="subscribe-icon">
+                        <use href="./images/icons.svg#illustration-3"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+
     </div>
+    
 </footer>
+
+<div class="modal-window">
+    <div class="modal">
+
+        <button class="exit-btn" type="button">
+            <svg width="8" height="8">
+                <use href="./images/icons.svg#illustration" />
+            </svg>
+        </button>
+
+        <p class="modal-ds">Leave your contacts and we will call you back</p>
+
+        <form class="modal-form">
+
+            <div class="form-field">
+                <label for="username" class="style-n">Name</label>
+                <div class="input-wrapper">
+                    <input class="colum-text" type="text" name="username" id="username" required />
+                    <svg class="field-icon" width="20" height="18">
+                        <use href="./images/icons.svg#Vector" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label for="phone" class="style-n">Phone</label>
+                <div class="input-wrapper">
+                    <input class="colum-text" type="tel" name="phone" id="phone" required />
+                    <svg class="field-icon" width="18" height="20">
+                        <use href="./images/icons.svg#illustration-1" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label for="email" class="style-n">Email</label>
+                <div class="input-wrapper">
+                    <input class="colum-text" type="email" name="email" id="email" required />
+                    <svg class="field-icon" width="18" height="20">
+                        <use href="./images/icons.svg#illustration-2" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="comment">
+            <p class="label-comment">Comment</p>
+            <textarea class="comment-field" placeholder="Text input"></textarea>
+            </div>
+            <div class="area-text">
+                <label>
+                    <input class="checkbox" type="checkbox" name="done" value="done"/>                    
+                    <span class="text-accept">I accept the terms and conditions of the <a href="#">Privacy Policy</a></span>
+                </label>
+            </div>
+            <div class="send-btn">
+                <button class="btn-send" type="button">Send</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
 
 </body>
 
