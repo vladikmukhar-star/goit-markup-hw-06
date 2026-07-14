@@ -11,11 +11,16 @@
   justify-content: center;
 
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-window.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -30,6 +35,7 @@
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   position: relative;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-ds {
@@ -51,30 +57,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(46, 47, 66, 0.1);
   background: #e7e9fc;
   border-radius: 50%;
   width: 24px;
   height: 24px;
   cursor: pointer;
   padding: 0;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exit-btn svg {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .exit-btn:hover,
 .exit-btn:focus {
   background: #404bbf;
+  border: none;
+}
+
+.exit-btn:hover svg,
+.exit-btn:focus svg {
+  fill: #ffffff;
 }
 
 .modal-form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .form-field {
   display: flex;
   flex-direction: column;
+  margin-bottom: 8px;
 }
 
 .style-n {
@@ -123,46 +142,110 @@
 }
 
 .comment {
-  width: 362px;
-  height: 138px;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .label-comment {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
-  line-height: 117%;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .comment-field {
-  border: 1px solid #2e2f42;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 8px 16px;
-  width: 362px;
+  width: 100%;
   height: 120px;
   resize: none;
+  background-color: transparent;
+  outline: transparent;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-field:focus {
+  border-color: #4d5ae5;
+}
+
+.comment-field::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.area-text {
+  margin-bottom: 24px;
+}
+
+.label-policy {
+  cursor: pointer;
 }
 
 .checkbox {
-  border-radius: 2px;
-  border: 1px solid #2e2f42;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .text-accept {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
-  line-height: 117%;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
 }
 
-.area-text {
-  width: 362px;
+.custom-checkbox {
+  width: 16px;
   height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.checkbox-icon {
+  fill: #fcfcfc;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .text-accept .custom-checkbox {
+  background-color: #404bbf;
+  border-color: #404bbf;
+}
+
+.checkbox:checked + .text-accept .checkbox-icon {
+  opacity: 1;
+}
+
+.text-accept a {
+  color: #4d5ae5;
+  text-decoration: underline;
 }
 
 .send-btn {
@@ -175,9 +258,10 @@
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
+  cursor: pointer;
 
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
@@ -187,7 +271,8 @@
   padding: 16px 32px;
   width: 169px;
   height: 56px;
-  margin-top: 24px;
+  margin-top: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-send:hover,
