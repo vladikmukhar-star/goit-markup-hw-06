@@ -121,12 +121,18 @@
   border: 1px solid #ffffff;
   border-radius: 4px;
   background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 16px;
   color: #ffffff;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
   box-sizing: border-box;
+}
+
+.subscribe-input:focus {
+  border-color: #31d0aa;
+  outline: none;
 }
 
 .subscribe-input::placeholder {
