@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,113 +15,110 @@
         integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="./css/mobile-menu.css">
 
     <title>WebStudio</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-    <!--шапка хедера-->
+
+    <!-- Хедер -->
     <header class="header" id="header">
-        <div class="container">
-            <div class="container-links">
+        <div class="container header-container">
+            <a href="./index.html" class="logo"><span class="accent">Web</span>Studio</a>
 
-                <a href="./index.html" class="logo"><span class="accent">Web</span>Studio</a>
+            <!-- Навігація (ховається на мобілці) -->
+            <nav class="header-nav">
+                <ul class="header-link">
+                    <li><a class="nav-link current" href="#features">Features</a></li>
+                    <li><a class="nav-link" href="#team">Team</a></li>
+                    <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
 
-                <nav class="header-nav">
-                    <ul class="header-link">
-                        <li><a class="nav-link current" href="#features">Features</a></li>
-                        <li><a class="nav-link" href="#team">Team</a></li>
-                        <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    </ul>
-                </nav>
+            <!-- Контакти (ховаються на мобілці) -->
+            <address class="contacts-address">
+                <ul class="header-contact">
+                    <li><a class="contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    <li><a class="contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                </ul>
+            </address>
 
-                <address class="contacts-address">
-                    <ul class="header-contact">
-                        <li><a class="contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                        <li><a class="contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
-                    </ul>
-                </address>
-
-            </div>
+            <!-- Кнопка-гамбургер для мобілки -->
+            <button class="menu-toggle js-open-menu" type="button" aria-label="Open mobile menu">
+                <svg width="24" height="24">
+                    <use href="./css/icons.svg#toggle"></use>
+                </svg>
+            </button>
         </div>
     </header>
 
 
     <!--шапка сторінки-->
     <main>
-        <section class="hero hero-background" id="hero">
+        <section class="hero" id="hero">
             <div class="container hero-container">
-
-                <h1 class="page-title">Effective Solutions<br> for Your Business</h1>
-                <div class="but">
-                    <button class="button" type="button">Order Service</button>
-                </div>
+                <h1 class="page-title">Effective Solutions<br>for Your Business</h1>
+                <button class="button" type="button">Order Service</button>
             </div>
         </section>
 
-        <!--секці features-->
+        <!--секція features-->
 
-        <section class="features-box" id="features">
-            <div class="container hero-container">
-                <h2 class="sr-only">Our features</h2>
+        <section class="features-section" id="features">
+            <div class="container">
 
-                <ul class="features-description">
+                <h2 class="visually-hidden">Our features</h2>
+
+                <ul class="features-list">
                     <li class="features-item">
-
-                        <div class="ilustration">
+                        <div class="features-icon-box">
                             <svg width="64" height="64">
                                 <use href="./images/icons.svg#antena"></use>
                             </svg>
                         </div>
-
-                        <h3 class="description-features">Strategy</h3>
-                        <p class="style">
+                        <h3 class="features-title">Strategy</h3>
+                        <p class="features-text">
                             Our goal is to identify the business problem to walk away with the perfect and creative
                             solution.
                         </p>
                     </li>
 
                     <li class="features-item">
-
-                        <div class="ilustration">
+                        <div class="features-icon-box">
                             <svg width="64" height="64">
                                 <use href="./images/icons.svg#clock"></use>
                             </svg>
                         </div>
-
-                        <h3 class="description-features">Punctuality</h3>
-                        <p class="style">
+                        <h3 class="features-title">Punctuality</h3>
+                        <p class="features-text">
                             Bring the key message to the brand's audience for the best price within the shortest
                             possible time.
                         </p>
                     </li>
 
                     <li class="features-item">
-
-                        <div class="ilustration">
+                        <div class="features-icon-box">
                             <svg width="64" height="64">
                                 <use href="./images/icons.svg#diagram"></use>
                             </svg>
                         </div>
-
-                        <h3 class="description-features">Diligence</h3>
-                        <p class="style">
+                        <h3 class="features-title">Diligence</h3>
+                        <p class="features-text">
                             Research and confirm brands with the strongest digital growth opportunities and minimize
                             risk.
                         </p>
                     </li>
 
                     <li class="features-item">
-
-                        <div class="ilustration">
+                        <div class="features-icon-box">
                             <svg width="64" height="64">
                                 <use href="./images/icons.svg#astronaut"></use>
                             </svg>
                         </div>
-
-                        <h3 class="description-features">Technologies</h3>
-                        <p class="style">
+                        <h3 class="features-title">Technologies</h3>
+                        <p class="features-text">
                             Design practice focused on digital experiences. We bring forth a deep passion for
                             problem-solving.
                         </p>
@@ -131,45 +128,46 @@
         </section>
 
         <!--фото команди-->
-        <section class="team-background-color section-padding" id="team">
-            <div class="container container-team">
+        <section class="team-section" id="team">
+            <div class="container">
+                <h2 class="team-title">Our Team</h2>
 
-                <h2 class="team-description">Our Team</h2>
+                <ul class="team-list">
+                    <li class="team-card">
+                        <img src="./images/team-1.jpg" srcset="./images/team-1.jpg 1x, ./images/team-1@2x.jpg 2x"
+                            alt="Mark Guerrero" width="264" height="260" loading="lazy" />
 
-                <ul class="list-none image-flex">
-                    <li class="team-color">
-                        <img src="./images/team-1.jpg" alt="Mark Guerrero" height="260" width="264">
-                        <div class="box-container">
-                            <h3 class="name">Mark Guerrero</h3>
-                            <p class="profession-team">Product Designer</p>
-                            <ul class="icons-links">
-                                <li class="ilustration-color">
+                        <div class="team-card-content">
+                            <h3 class="team-member-name">Mark Guerrero</h3>
+                            <p class="team-member-role">Product Designer</p>
+                            <ul class="team-social-list">
+                                <li class="team-social-item">
                                     <a href="https://instagram.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Instagram">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://twitter.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Twitter">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://facebook.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Facebook">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://linkedin.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="LinkedIn">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#linkedin"></use>
                                         </svg>
@@ -179,39 +177,41 @@
                         </div>
                     </li>
 
-                    <li class="team-color">
-                        <img src="./images/team-2.jpg" alt="Tom Ford" height="260" width="264">
-                        <div class="box-container">
-                            <h3 class="name">Tom Ford</h3>
-                            <p class="profession-team">Frontend Developer</p>
-                            <ul class="icons-links">
-                                <li class="ilustration-color">
+                    <li class="team-card">
+                        <img src="./images/team-2.jpg" srcset="./images/team-2.jpg 1x, ./images/team-2@2x.jpg 2x"
+                            alt="Tom Ford" width="264" height="260" loading="lazy" />
+
+                        <div class="team-card-content">
+                            <h3 class="team-member-name">Tom Ford</h3>
+                            <p class="team-member-role">Frontend Developer</p>
+                            <ul class="team-social-list">
+                                <li class="team-social-item">
                                     <a href="https://instagram.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Instagram">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://twitter.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Twitter">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://facebook.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Facebook">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://linkedin.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="LinkedIn">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#linkedin"></use>
                                         </svg>
@@ -221,39 +221,41 @@
                         </div>
                     </li>
 
-                    <li class="team-color">
-                        <img src="./images/team-3.jpg" alt="Camila Garcia" height="260" width="264">
-                        <div class="box-container">
-                            <h3 class="name">Camila Garcia</h3>
-                            <p class="profession-team">Marketing</p>
-                            <ul class="icons-links">
-                                <li class="ilustration-color">
+                    <li class="team-card">
+                        <img src="./images/team-3.jpg" srcset="./images/team-3.jpg 1x, ./images/team-3@2x.jpg 2x"
+                            alt="Camila Garcia" width="264" height="260" loading="lazy" />
+
+                        <div class="team-card-content">
+                            <h3 class="team-member-name">Camila Garcia</h3>
+                            <p class="team-member-role">Marketing</p>
+                            <ul class="team-social-list">
+                                <li class="team-social-item">
                                     <a href="https://instagram.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Instagram">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://twitter.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Twitter">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://facebook.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Facebook">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://linkedin.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="LinkedIn">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#linkedin"></use>
                                         </svg>
@@ -263,39 +265,41 @@
                         </div>
                     </li>
 
-                    <li class="team-color">
-                        <img src="./images/team-4.jpg" alt="Daniel Wilson" height="260" width="264">
-                        <div class="box-container">
-                            <h3 class="name">Daniel Wilson</h3>
-                            <p class="profession-team">UI Designer</p>
-                            <ul class="icons-links">
-                                <li class="ilustration-color">
+                    <li class="team-card">
+                        <img src="./images/team-4.jpg" srcset="./images/team-4.jpg 1x, ./images/team-4@2x.jpg 2x"
+                            alt="Daniel Wilson" width="264" height="260" loading="lazy" />
+
+                        <div class="team-card-content">
+                            <h3 class="team-member-name">Daniel Wilson</h3>
+                            <p class="team-member-role">UI Designer</p>
+                            <ul class="team-social-list">
+                                <li class="team-social-item">
                                     <a href="https://instagram.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Instagram">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://twitter.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Twitter">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://facebook.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="Facebook">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="ilustration-color">
+                                <li class="team-social-item">
                                     <a href="https://linkedin.com" class="team-social-link" target="_blank"
-                                        rel="noopener noreferrer">
+                                        rel="noopener noreferrer" aria-label="LinkedIn">
                                         <svg width="16" height="16" class="team-social-icon">
                                             <use href="./images/icons.svg#linkedin"></use>
                                         </svg>
@@ -305,146 +309,136 @@
                         </div>
                     </li>
                 </ul>
-
             </div>
         </section>
 
 
         <!--секції портфоліо-->
 
-        <section class="portfolio section-padding" id="portfolio">
-            <div class="container container-portfolio">
+        <section class="portfolio section" id="portfolio">
+            <div class="container">
+                <h2 class="portfolio-title">Our Portfolio</h2>
+                <ul class="portfolio-list list">
+                    <!-- Картка 1 -->
+                    <li class="portfolio-item">
+                        <div class="portfolio-thumb">
+                            <picture>
+                                <source srcset="./images/portfolio-1.jpg 1x, ./images/portfolio-1@2x.jpg 2x" />
+                                <img src="./images/portfolio-1.jpg" alt="Banking App Interface" width="360" height="300"
+                                    loading="lazy" />
+                            </picture>
+                            <p class="portfolio-overlay">
+                                14 October City Guide is a comprehensive guide to many of New York City's most
+                                interesting,
+                                picturesque neighborhoods.
+                            </p>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-subtitle">Banking App</h3>
+                            <p class="portfolio-text">App</p>
+                        </div>
+                    </li>
 
-                <div class="list-portfolio">
-                    <h2 class="description">Our Portfolio</h2>
+                    <!-- Картка 2 -->
+                    <li class="portfolio-item">
+                        <div class="portfolio-thumb">
+                            <picture>
+                                <source srcset="./images/portfolio-2.jpg 1x, ./images/portfolio-2@2x.jpg 2x" />
+                                <img src="./images/portfolio-2.jpg" alt="Cashless Payment" width="360" height="300"
+                                    loading="lazy" />
+                            </picture>
+                            <p class="portfolio-overlay">
+                                14 October City Guide is a comprehensive guide to many of New York City's most
+                                interesting,
+                                picturesque neighborhoods.
+                            </p>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-subtitle">Cashless Payment</h3>
+                            <p class="portfolio-text">Marketing</p>
+                        </div>
+                    </li>
 
+                    <!-- Картка 3 -->
+                    <li class="portfolio-item">
+                        <div class="portfolio-thumb">
+                            <picture>
+                                <source srcset="./images/portfolio-3.jpg 1x, ./images/portfolio-3@2x.jpg 2x" />
+                                <img src="./images/portfolio-3.jpg" alt="Meditation App" width="360" height="300"
+                                    loading="lazy" />
+                            </picture>
+                            <p class="portfolio-overlay">
+                                14 October City Guide is a comprehensive guide to many of New York City's most
+                                interesting,
+                                picturesque neighborhoods.
+                            </p>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-subtitle">Meditation App</h3>
+                            <p class="portfolio-text">App</p>
+                        </div>
+                    </li>
 
+                    <!-- Картка 4 -->
+                    <li class="portfolio-item">
+                        <div class="portfolio-thumb">
+                            <picture>
+                                <source srcset="./images/portfolio-4.jpg 1x, ./images/portfolio-4@2x.jpg 2x" />
+                                <img src="./images/portfolio-4.jpg" alt="Taxi Service" width="360" height="300"
+                                    loading="lazy" />
+                            </picture>
+                            <p class="portfolio-overlay">
+                                14 October City Guide is a comprehensive guide to many of New York City's most
+                                interesting,
+                                picturesque neighborhoods.
+                            </p>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-subtitle">Taxi Service</h3>
+                            <p class="portfolio-text">Marketing</p>
+                        </div>
+                    </li>
 
+                    <!-- Картка 5 -->
+                    <li class="portfolio-item">
+                        <div class="portfolio-thumb">
+                            <picture>
+                                <source srcset="./images/portfolio-5.jpg 1x, ./images/portfolio-5@2x.jpg 2x" />
+                                <img src="./images/portfolio-5.jpg" alt="Screen Illustrations" width="360" height="300"
+                                    loading="lazy" />
+                            </picture>
+                            <p class="portfolio-overlay">
+                                14 October City Guide is a comprehensive guide to many of New York City's most
+                                interesting,
+                                picturesque neighborhoods.
+                            </p>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-subtitle">Screen Illustrations</h3>
+                            <p class="portfolio-text">Design</p>
+                        </div>
+                    </li>
 
-                    <ul class="portfolio-image flex-portfolio-description">
-
-                        <li class="item">
-
-                            <div class="gallery-item">
-
-                                <img src="./images/portfolio-1.jpg" alt="Banking App" height="300" width="360">
-
-                                <div class="overlay">
-                                    <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
-                                        Tracker App · Exotic Fruit
-                                        Ecommerce App ·
-                                        Cloud Storage App</p>
-                                </div>
-                            </div>
-
-
-                            <div class="project-list">
-
-                                <h3 class="profession">Banking App</h3>
-                                <p class="profession-description">App</p>
-
-                            </div>
-                        </li>
-
-                        <li class="item">
-
-                            <div class="gallery-item">
-
-                                <img src="./images/portfolio-2.jpg" alt="Cashless Payment" height="300" width="360">
-                                <div class="overlay">
-                                    <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
-                                        Tracker App · Exotic Fruit
-                                        Ecommerce App ·
-                                        Cloud Storage App</p>
-                                </div>
-                            </div>
-
-                            <div class="project-list">
-                                <h3 class="profession">Cashless Payment</h3>
-                                <p class="profession-description">Marketing</p>
-                            </div>
-                        </li>
-
-                        <li class="item">
-
-                            <div class="gallery-item">
-
-                                <img src="./images/portfolio-3.jpg" alt="Meditation App" height="300" width="360">
-                                <div class="overlay">
-                                    <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
-                                        Tracker App · Exotic Fruit
-                                        Ecommerce App ·
-                                        Cloud Storage App</p>
-                                </div>
-                            </div>
-
-                            <div class="project-list">
-                                <h3 class="profession">Meditation App</h3>
-                                <p class="profession-description">App</p>
-                            </div>
-
-                        </li>
-
-                        <li class="item">
-
-                            <div class="gallery-item">
-
-                                <img src="./images/portfolio-4.jpg" alt="Taxi Service" height="300" width="360">
-                                <div class="overlay">
-                                    <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
-                                        Tracker App · Exotic Fruit
-                                        Ecommerce App ·
-                                        Cloud Storage App</p>
-                                </div>
-                            </div>
-
-                            <div class="project-list">
-                                <h3 class="profession">Taxi Service</h3>
-                                <p class="profession-description">Marketing</p>
-                            </div>
-                        </li>
-
-
-                        <li class="item">
-
-                            <div class="gallery-item">
-                                <img src="./images/portfolio-5.jpg" alt="Screen Illustrations" height="300" width="360">
-                                <div class="overlay">
-                                    <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
-                                        Tracker App · Exotic Fruit
-                                        Ecommerce App ·
-                                        Cloud Storage App</p>
-
-                                </div>
-                            </div>
-
-                            <div class="project-list">
-                                <h3 class="profession">Screen Illustrations</h3>
-                                <p class="profession-description">Design</p>
-                            </div>
-                        </li>
-
-                        <li class="item">
-
-                            <div class="gallery-item">
-                                <img src="./images/portfolio-6.jpg" alt="Online Courses" height="300" width="360">
-                                <div class="overlay">
-                                    <p>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
-                                        Tracker App · Exotic Fruit
-                                        Ecommerce App ·
-                                        Cloud Storage App</p>
-
-                                </div>
-                            </div>
-
-                            <div class="project-list">
-                                <h3 class="profession">Online Courses</h3>
-                                <p class="profession-description">Marketing</p>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
+                    <!-- Картка 6 -->
+                    <li class="portfolio-item">
+                        <div class="portfolio-thumb">
+                            <picture>
+                                <source srcset="./images/portfolio-6.jpg 1x, ./images/portfolio-6@2x.jpg 2x" />
+                                <img src="./images/portfolio-6.jpg" alt="Online Courses" width="360" height="300"
+                                    loading="lazy" />
+                            </picture>
+                            <p class="portfolio-overlay">
+                                14 October City Guide is a comprehensive guide to many of New York City's most
+                                interesting,
+                                picturesque neighborhoods.
+                            </p>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-subtitle">Online Courses</h3>
+                            <p class="portfolio-text">Marketing</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -522,6 +516,35 @@
 
         </div>
     </footer>
+
+    <!-- Мобільне меню -->
+    <div class="menu js-menu-container" id="mobile-menu">
+        <div class="container menu-modal">
+            <button class="exit-button js-close-menu" type="button">
+                <svg width="8" height="8">
+                    <use href="./images/icons.svg#illustration"></use>
+                </svg>
+            </button>
+
+            <ul class="menu-box">
+                <li><a class="menu-description current" href="./index.html">Studio</a></li>
+                <li><a class="menu-description" href="#features">Features</a></li>
+                <li><a class="menu-description" href="#team">Team</a></li>
+                <li><a class="menu-description" href="#portfolio">Portfolio</a></li>
+                <li><a class="menu-description" href="#footer">Contacts</a></li>
+            </ul>
+
+            <div class="bottom-linc">
+                <address class="contacts-menu">
+                    <ul class="menu-contact">
+                        <li><a class="contact-box tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                        <li><a class="contact-box" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </div>
+
 
     <div class="modal-window" id="modal">
         <div class="modal">

@@ -1,101 +1,133 @@
-.header-link,
-.header-contact {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.header-link {
-  gap: 40px;
-}
-
-.header-contact {
-  gap: 40px;
-}
-
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
 
-.container-links {
+.header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
+  display: block;
+  padding: 16px 0;
   font-family: 'Raleway', sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  line-height: 1.17;
   font-size: 18px;
   font-weight: 700;
+  line-height: 1.17;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: #2e2f42;
-
-  margin-right: 76px;
+  text-decoration: none;
 }
 
 .logo .accent {
   color: #4d5ae5;
 }
 
-.header-nav {
+.header-nav,
+.contacts-address {
+  display: none;
+}
+
+.menu-toggle {
   display: flex;
   align-items: center;
-  margin-right: auto;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  stroke: #2e2f42;
 }
 
-.nav-link,
-.contact-link {
-  display: block;
-  padding: 24px 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+/*  TABLET - DESKTOP (>=768px)  */
+
+@media screen and (min-width: 768px) {
+  /* Ховаємо кнопку-гамбургер */
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Показуємо навігацію та контакти */
+  .header-nav,
+  .contacts-address {
+    display: flex;
+  }
+
+  .header-container {
+    justify-content: flex-start;
+  }
+
+  .logo {
+    padding: 24px 0;
+    margin-right: 120px;
+  }
+
+  .header-nav {
+    margin-right: auto;
+  }
+
+  .header-link,
+  .header-contact {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .contacts-address {
+    font-style: normal;
+  }
+
+  .nav-link,
+  .contact-link {
+    display: block;
+    padding: 24px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    color: #2e2f42;
+    position: relative;
+  }
+
+  .nav-link.current {
+    color: #404bbf;
+  }
+
+  .nav-link.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+  }
+
+  .contact-link {
+    font-weight: 400;
+    color: #434455;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus,
+  .contact-link:hover,
+  .contact-link:focus {
+    color: #404bbf;
+  }
 }
 
-.nav-link {
-  font-weight: 500;
-  color: #2e2f42;
-  position: relative;
-}
-
-.nav-link.current {
-  color: #404bbf;
-}
-
-.nav-link.current::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
-}
-
-.contacts-address {
-  font-style: normal;
-}
-
-.contact-link {
-  font-weight: 400;
-  color: #434455;
-}
-
-.nav-link:hover,
-.nav-link:focus,
-.contact-link:hover,
-.contact-link:focus {
-  color: #404bbf;
-}
-/* phone 
-.header {
-  width: 320px;
+/* Невелике уточнення для Десктопа (1158px+) */
+@media screen and (min-width: 1158px) {
+  .logo {
+    margin-right: 76px;
+  }
 }

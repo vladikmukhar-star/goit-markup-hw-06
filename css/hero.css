@@ -1,53 +1,50 @@
-/* phone */
+/* BASE / MOBILE (<768px)*/
+
 .hero {
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(46, 47, 66, 0.7) 0%,
-      rgba(46, 47, 66, 0.7) 100%
-    ),
-    url(../images/hero-bg.jpg);
+  max-width: 428px;
+  margin: 0 auto;
+  padding: 72px 0;
+  background-color: #2e2f42;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 432px;
-  width: 320px;
+
+  /* Фонове зображення для мобілки (1x та 2x) */
+  background-image:
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    image-set(
+      url('../images/hero-bg320@1x.jpg') 1x,
+      url('../images/hero-bg320@2x.jpg') 2x
+    );
 }
 
 .page-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 72px 0px;
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #fff;
-}
-.but {
-  display: flex;
-  justify-content: center;
+  color: #ffffff;
+  max-width: 216px;
+  margin: 0 auto 72px auto;
 }
 
 .button {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
   background-color: #4d5ae5;
-  color: #ffffff;
-  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  padding: 16px 32px;
+  color: #ffffff;
+  cursor: pointer;
   border-radius: 4px;
-  border: none;
+  margin: 0 auto;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms ease-in-out;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -55,68 +52,47 @@
   background-color: #404bbf;
 }
 
-/* desctop */
-@media (min-width: 1158px) {
+/* TABLET (768px - 1157px)  */
+
+@media screen and (min-width: 768px) {
   .hero {
+    max-width: 768px;
+    padding: 112px 0;
+
+    /* Фонове зображення для планшета (1x та 2x) */
     background-image:
-      linear-gradient(
-        180deg,
-        rgba(46, 47, 66, 0.7) 0%,
-        rgba(46, 47, 66, 0.7) 100%
-      ),
-      url(../images/hero-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .hero-background {
-    padding: 188px 0;
-
-    background-color: #2e2f42;
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      image-set(
+        url('../images/hero-bg-tb@1x.png') 1x,
+        url('../images/hero-bg-tb@2x.png') 2x
+      );
   }
 
   .page-title {
-    color: #ffffff;
     font-size: 56px;
     line-height: 1.07;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    padding-bottom: 48px;
     max-width: 496px;
-    margin: 0 auto;
+    margin-bottom: 36px;
+  }
+}
+
+/* DESKTOP (>=1158px)  */
+
+@media screen and (min-width: 1158px) {
+  .hero {
+    max-width: 1440px;
+    padding: 188px 0;
+
+    /* Фонове зображення для десктопа (1x та 2x) */
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      image-set(
+        url('../images/hero-bg-ds@1x.jpg') 1x,
+        url('../images/hero-bg-ds@2x.jpg') 2x
+      );
   }
 
-  .but {
-    display: flex;
-    justify-content: center;
-  }
-
-  .button {
-    background-color: #4d5ae5;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    padding: 16px 32px;
-    border-radius: 4px;
-    border: none;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    transition: background-color 250ms ease-in-out;
-  }
-
-  .button:hover,
-  .button:focus {
-    background-color: #404bbf;
+  .page-title {
+    margin-bottom: 48px;
   }
 }

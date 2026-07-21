@@ -1,119 +1,124 @@
+/* Портфоліо - Базові стилі */
 .portfolio {
-  padding: 120px 0px;
+  padding: 96px 0;
 }
 
-.container-portfolio {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.list-portfolio {
-  display: block;
-}
-
-.description {
-  font-size: 36px;
-  text-align: center;
-  color: #2e2f42;
+.portfolio-title {
   font-weight: 700;
+  font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  text-transform: capitalize;
   margin-bottom: 72px;
 }
 
-.flex-portfolio-description {
+.portfolio-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 48px 24px;
+  flex-direction: column;
+  gap: 48px;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
-.item {
-  width: calc((100% - 48px) / 3);
-
+.portfolio-item {
+  width: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.item:hover {
+.portfolio-item:hover,
+.portfolio-item:focus-within {
   box-shadow:
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-.portfolio-image img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.gallery-item {
+.portfolio-thumb {
   position: relative;
   overflow: hidden;
 }
 
-.item:hover .overlay {
-  transform: translateY(0);
+.portfolio-thumb img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
-.overlay {
+/* Оверлей */
+.portfolio-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
-  transform: translateY(100%);
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px 32px;
-}
-
-.overlay p {
-  color: #f4f4fd;
-  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: #f4f4fd;
   margin: 0;
+
+  /* Висуваємо вниз */
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-list {
+.portfolio-item:hover .portfolio-overlay,
+.portfolio-item:focus-within .portfolio-overlay {
+  transform: translateY(0);
+}
+
+.portfolio-content {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
 
-.profession {
-  font-family: 'Roboto', sans-serif;
-  color: #2e2f42;
+.portfolio-subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  color: #2e2f42;
   margin-bottom: 8px;
 }
 
-.profession-description {
-  color: #434455;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+.portfolio-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: #434455;
   margin: 0;
 }
 
-/* phone */
-.flex-portfolio-description {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px 24px;
-  padding: 0;
-  margin: 0;
-  gap: 48px 0px;
+/* Адаптив під Планшет і Десктоп */
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .portfolio-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .portfolio {
+    padding: 120px 0;
+  }
+
+  .portfolio-list {
+    gap: 48px 24px;
+  }
+
+  .portfolio-item {
+    width: calc((100% - 48px) / 3);
+  }
 }
