@@ -24,17 +24,29 @@
   pointer-events: auto;
 }
 
+/* Мобільні стилі модалки (до 767px включно) */
 .modal {
   border-radius: 4px;
-  padding: 72px 16px 24px;
+  padding: 72px 16px 24px 16px;
   width: 288px;
-  height: 640px;
+  min-height: 584px;
   box-shadow:
     0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   position: relative;
+  transition:
+    width 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    padding 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Планшет і Десктоп (від 768px) */
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
 }
 
 .modal-ds {
