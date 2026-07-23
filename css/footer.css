@@ -89,7 +89,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 .subscribe-description {
@@ -216,6 +215,6 @@
 
   .footer-subscribe-container {
     align-items: flex-start;
-    padding-left: 83px;
+    margin: auto;
   }
 }
